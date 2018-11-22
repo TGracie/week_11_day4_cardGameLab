@@ -18,7 +18,7 @@ public class GameTest {
         game = new Game(deck);
         player1 = new Player("Thomas");
         player2 = new Player("Jen");
-        player2 = new Player("Craig");
+        player3 = new Player("Craig");
         game.addPlayer(player1);
         game.addPlayer(player2);
         game.addPlayer(player3);
@@ -44,11 +44,11 @@ public class GameTest {
         assertEquals(1, player3.cardCount());
     }
 
-    @Test
-    public void gameHasWinner(){
-        game.newDeal();
-        assertEquals(player2, game.checkWin(player1, player2));
-    }
+//    @Test
+//    public void gameHasWinner(){
+//        game.newDeal();
+//        assertEquals(player2, game.checkWin(player1, player2));
+//    }
 
     @Test
     public void threePlayerGameHasWinner(){

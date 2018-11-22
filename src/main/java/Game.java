@@ -40,13 +40,15 @@ public class Game {
 //    }
 
     public Player checkWin(){
-        int leader = players.first().handValue()
+        int leader = players.get(0).handValue();
+        Player winner = players.get(0);
         for(Player player : this.players){
 //            int leader = player.handValue();
             if (player.handValue() > leader){
                 leader = player.handValue();
+                winner = player;
             }
         }
-       // return the player
+       return winner;
     }
 }
