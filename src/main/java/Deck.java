@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck {
 
@@ -12,17 +13,6 @@ public class Deck {
         return this.deck.size();
     }
 
-//    public void fillDeck(){
-////        SuitType suit = new SuitType;
-////        for (suit : SuitType){
-////            Rank rank = new Rank;
-//            for(Rank rank : Rank.values()){
-//                Card card = new Card(SuitType.CLUBS, rank);
-//                this.deck.add(card);
-//            }
-//        }
-////    }
-
     public void fillDeck(){
         // need to loop through suitTypes
             for(SuitType suit : SuitType.values()){
@@ -34,5 +24,16 @@ public class Deck {
                     this.deck.add(card);
                 }
             }
+    }
+
+    public void shuffleCards() {
+        Collections.shuffle(deck);
+    }
+
+    // could have an isShuffled method
+    // keeps the original deck and checks if the shuffled deck is equal to the new deck.
+
+    public Card dealCard(){
+        return this.deck.remove(0);
     }
 }
